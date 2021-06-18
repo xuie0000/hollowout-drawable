@@ -51,10 +51,10 @@ class FirstFragment : Fragment() {
       .data(url)
       .target(
         onSuccess = { result ->
-          Timber.d("HollowOutImageView load image success")
           binding.image2.setImageDrawable(result)
           binding.image5.setImageDrawable(result)
           binding.image6.setImageDrawable(result)
+          binding.image7.setImageDrawable(result)
         }
       )
       .build()

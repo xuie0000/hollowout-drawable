@@ -16,7 +16,6 @@
             android:layout_width="match_parent"
             android:layout_height="160dp"
             android:scaleType="centerCrop"
-            app:hollow_out_color="@android:color/holo_red_dark"
             app:hollow_out_padding="18dp"
             app:hollow_out_shape="round_corner"
             app:layout_constraintTop_toTopOf="parent" />
@@ -26,6 +25,8 @@
             android:layout_width="match_parent"
             android:layout_height="160dp"
             android:scaleType="centerCrop"
+            app:hollow_out_color="#90F2F2F2"
+            app:hollow_out_round_corner_stroke="2dp"
             app:layout_constraintTop_toBottomOf="@id/image1" />
 
         <com.xuie0000.hollowout.drawable.HollowOutImageView
@@ -35,6 +36,9 @@
             android:scaleType="centerCrop"
             android:src="@mipmap/image"
             app:hollow_out_padding_horizontal="0dp"
+            app:hollow_out_round_corner="20dp"
+            app:hollow_out_round_corner_color="#FF6347"
+            app:hollow_out_round_corner_stroke="3dp"
             app:layout_constraintTop_toBottomOf="@id/image2" />
 
         <com.xuie0000.hollowout.drawable.HollowOutImageView
@@ -50,7 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="160dp"
             android:scaleType="centerCrop"
-            app:hollow_out_shape="circle"
+            app:hollow_out_shape="oval"
             app:layout_constraintTop_toBottomOf="@id/image_net" />
 
         <com.xuie0000.hollowout.drawable.HollowOutImageView
@@ -60,6 +64,24 @@
             android:scaleType="centerCrop"
             app:hollow_out_shape="rectangle"
             app:layout_constraintTop_toBottomOf="@id/image5" />
+
+        <com.xuie0000.hollowout.drawable.HollowOutImageView
+            android:id="@+id/image7"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            app:hollow_out_shape="circle"
+            app:layout_constraintTop_toBottomOf="@id/image6" />
+
+        <com.xuie0000.hollowout.drawable.HollowOutImageView
+            android:id="@+id/image8"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/image"
+            app:hollow_out_padding_horizontal="0dp"
+            app:hollow_out_shape="arc"
+            app:layout_constraintTop_toBottomOf="@id/image7" />
 
         <Button
             android:id="@+id/button_first"
