@@ -4,6 +4,8 @@
 
 <img src="hollowout-drawable.png" width="256"/><img src="https://user-images.githubusercontent.com/8099426/122499006-ad4e7e00-d022-11eb-9dc5-e8f047366fc9.gif" width="256"/>
 
+> Notes: library use 'androidx.palette:palette-ktx', if don't want to， you may give up
+
 # Usage
 
 repositories add `mavenCentral()`
@@ -26,8 +28,6 @@ hollow_out_round_corner_stroke | dimension | | round corner stroke width
 hollow_out_round_corner_color | color | 10dp | round corner stroke color
 hollow_out_arc_startAngle | float | 0f | arc start angle
 hollow_out_arc_sweepAngle | float | 180f | arc sweep angle
-
-> Notes: library use 'androidx.palette:palette-ktx', if don't want to， you may give up
 
 # References
 
