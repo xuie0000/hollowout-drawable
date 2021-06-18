@@ -28,6 +28,8 @@ hollow_out_round_corner_color | color | 10dp | round corner stroke color
 hollow_out_arc_startAngle | float | 0f | arc start angle
 hollow_out_arc_sweepAngle | float | 180f | arc sweep angle
 
+> Notes: library use 'androidx.palette:palette-ktx', if don't want to， you may give up
+
 # References
 
 https://zhuanlan.zhihu.com/p/329825945
