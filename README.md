@@ -11,7 +11,7 @@
 repositories add `mavenCentral()`
 
 ```groovy
-implementation "com.xuie0000:hollowout.drawable:1.0.1"
+implementation "com.xuie0000:hollowout.drawable:1.0.2"
 ```
 
 support AppCompatImageView&**ShapeableImageView** hollow out drawable

@@ -100,8 +100,9 @@ internal open class HollowOut(
     if (blurBitmap == null) {
       blurBitmap = when {
         coverColor != -1 -> createColorBitmap(view.width, view.height, coverColor)
-        view.drawable != null -> context.blur(view.drawable.toBitmap())
-        view.background != null -> context.blur(view.background.toBitmap())
+        // filter color resources, eg:`android:background="@color/teal_200"`
+        view.drawable != null && view.drawable.intrinsicWidth > 0 -> context.blur(view.drawable.toBitmap())
+        view.background != null && view.background.intrinsicWidth > 0 -> context.blur(view.background.toBitmap())
         else -> null
       }
     }
