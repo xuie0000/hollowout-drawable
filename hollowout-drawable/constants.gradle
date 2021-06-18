@@ -1,0 +1,14 @@
+ext {
+    projectName = 'hollowout-drawable'
+    projectDesc = 'android hollowout drawable'
+
+    githubUrl = 'https://github.com/xuie0000/hollowout-drawable'
+
+    mavenGroup = 'com.xuie0000'
+    mavenArtifactId = 'hollowout.drawable'
+    mavenVersion = '1.0.0'
+
+    developerId = 'xuie0000'
+    developerName = 'Jie Xu'
+    developerEmail = 'xuie0000@163.com'
+}
