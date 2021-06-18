@@ -39,6 +39,14 @@ support AppCompatImageView&**ShapeableImageView** hollow out drawable
     app:shapeAppearanceOverlay="@style/roundedCornerStyle" />
 ```
 
+if you load net-image, need **disable hardware** function
+
+```kotlin
+binding.image.load(url) {
+  allowHardware(false)
+}
+```
+
 ## 属性介绍
 
 Attribute | Type | Default | Description

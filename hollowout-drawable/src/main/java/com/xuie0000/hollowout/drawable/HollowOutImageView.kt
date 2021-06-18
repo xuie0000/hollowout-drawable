@@ -1,11 +1,9 @@
 package com.xuie0000.hollowout.drawable
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Canvas
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatImageView
-
 
 /**
  * 参考：https://zhuanlan.zhihu.com/p/329825945
@@ -16,7 +14,6 @@ class HollowOutImageView @JvmOverloads constructor(
 
   private val hollowOut = HollowOut(context, attrs, this)
 
-  @SuppressLint("DrawAllocation")
   override fun onLayout(changed: Boolean, left: Int, top: Int, right: Int, bottom: Int) {
     super.onLayout(changed, left, top, right, bottom)
     hollowOut.layout()
