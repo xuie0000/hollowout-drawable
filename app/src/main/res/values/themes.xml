@@ -22,4 +22,11 @@
     <style name="Theme.Hollowoutdrawable.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.Hollowoutdrawable.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="roundedCornerStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+
 </resources>

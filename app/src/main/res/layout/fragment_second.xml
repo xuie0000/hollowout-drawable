@@ -1,27 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SecondFragment">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textview_second"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/button_second"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".FirstFragment">
 
-    <Button
-        android:id="@+id/button_second"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/previous"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_second" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.xuie0000.hollowout.drawable.HollowOutShapeableImageView
+            android:id="@+id/image1"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            app:hollow_out_padding="18dp"
+            app:hollow_out_shape="round_corner"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/roundedCornerStyle" />
+
+        <com.xuie0000.hollowout.drawable.HollowOutShapeableImageView
+            android:id="@+id/image2"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            app:hollow_out_color="#90F2F2F2"
+            app:hollow_out_round_corner_stroke="2dp"
+            app:layout_constraintTop_toBottomOf="@id/image1"
+            app:shapeAppearanceOverlay="@style/roundedCornerStyle" />
+
+        <com.xuie0000.hollowout.drawable.HollowOutShapeableImageView
+            android:id="@+id/image_local"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/image"
+            app:hollow_out_padding_horizontal="0dp"
+            app:hollow_out_round_corner="20dp"
+            app:hollow_out_round_corner_color="#FF6347"
+            app:hollow_out_round_corner_stroke="3dp"
+            app:layout_constraintTop_toBottomOf="@id/image2"
+            app:shapeAppearanceOverlay="@style/roundedCornerStyle" />
+
+        <com.xuie0000.hollowout.drawable.HollowOutShapeableImageView
+            android:id="@+id/image_net"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            app:hollow_out_shape="rectangle"
+            app:layout_constraintTop_toBottomOf="@id/image_local"
+            app:shapeAppearanceOverlay="@style/roundedCornerStyle" />
+
+        <com.xuie0000.hollowout.drawable.HollowOutShapeableImageView
+            android:id="@+id/image5"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            app:hollow_out_shape="oval"
+            app:layout_constraintTop_toBottomOf="@id/image_net"
+            app:shapeAppearanceOverlay="@style/roundedCornerStyle" />
+
+        <com.xuie0000.hollowout.drawable.HollowOutShapeableImageView
+            android:id="@+id/image6"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            app:hollow_out_shape="rectangle"
+            app:layout_constraintTop_toBottomOf="@id/image5"
+            app:shapeAppearanceOverlay="@style/roundedCornerStyle" />
+
+        <com.xuie0000.hollowout.drawable.HollowOutShapeableImageView
+            android:id="@+id/image7"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            app:hollow_out_shape="circle"
+            app:layout_constraintTop_toBottomOf="@id/image6"
+            app:shapeAppearanceOverlay="@style/roundedCornerStyle" />
+
+        <com.xuie0000.hollowout.drawable.HollowOutShapeableImageView
+            android:id="@+id/image8"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/image"
+            app:hollow_out_shape="arc"
+            app:layout_constraintTop_toBottomOf="@id/image7"
+            app:shapeAppearanceOverlay="@style/roundedCornerStyle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
