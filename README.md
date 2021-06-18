@@ -2,7 +2,7 @@
 
 镂空遮罩图层库是为了适配网易云Video的封面时看到有一层图层，且转角还画了线，没有找到好的方案就自己写成了库
 
-<img src="hollowout-drawable.png" width="256"/><img src="https://user-images.githubusercontent.com/8099426/122499006-ad4e7e00-d022-11eb-9dc5-e8f047366fc9.gif" width="256"/>
+<img src="hollowout-drawable.png" width="256"/><img src="hollowout-drawable2.png" width="256"/><img src="https://user-images.githubusercontent.com/8099426/122522727-da158c00-d048-11eb-81e6-00ce67ec0b75.gif" width="256"/>
 
 > Notes: library use 'androidx.palette:palette-ktx', if don't want to， you may give up
 
@@ -11,7 +11,31 @@
 repositories add `mavenCentral()`
 
 ```groovy
-implementation "com.xuie0000:hollowout.drawable:1.0.0"
+implementation "com.xuie0000:hollowout.drawable:1.0.1"
+```
+
+support AppCompatImageView&**ShapeableImageView** hollow out drawable
+
+```xml
+<com.xuie0000.hollowout.drawable.HollowOutImageView
+    android:id="@+id/image"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:scaleType="centerCrop"
+    app:hollow_out_padding="18dp"
+    app:hollow_out_shape="round_corner"
+    app:layout_constraintTop_toTopOf="parent" />
+```
+
+```xml
+<com.xuie0000.hollowout.drawable.HollowOutShapeableImageView
+    android:id="@+id/image"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:scaleType="centerCrop"
+    app:hollow_out_padding="18dp"
+    app:hollow_out_shape="round_corner"
+    app:layout_constraintTop_toTopOf="parent" />
 ```
 
 ## 属性介绍

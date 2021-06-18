@@ -6,7 +6,7 @@ ext {
 
     mavenGroup = 'com.xuie0000'
     mavenArtifactId = 'hollowout.drawable'
-    mavenVersion = '1.0.0'
+    mavenVersion = '1.0.1'
 
     developerId = 'xuie0000'
     developerName = 'Jie Xu'
