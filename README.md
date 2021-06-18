@@ -15,8 +15,18 @@ implementation "com.xuie0000:hollowout.drawable:1.0.0"
 
 ## 属性介绍
 
-Attribute | Type | Default
-
+Attribute | Type | Default | Description
+---|---|---|---
+hollow_out_padding | dimension | 40dp | padding to view side
+hollow_out_padding_horizontal | dimension | | horizontal padding to view side
+hollow_out_padding_vertical | dimension | | vertical padding to view side
+hollow_out_shape | enum | round_corner | shapes, include round_corner,circle,oval,rectangle,arc
+hollow_out_color | color | null | if the color exist, will **replace blur image**
+hollow_out_round_corner | dimension | 10dp | round corner radius
+hollow_out_round_corner_stroke | dimension | | round corner stroke width
+hollow_out_round_corner_color | color | 10dp | round corner stroke color
+hollow_out_arc_startAngle | float | 0f | arc start angle
+hollow_out_arc_sweepAngle | float | 180f | arc sweep angle
 
 # References
 
