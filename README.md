@@ -35,7 +35,8 @@ support AppCompatImageView&**ShapeableImageView** hollow out drawable
     android:scaleType="centerCrop"
     app:hollow_out_padding="18dp"
     app:hollow_out_shape="round_corner"
-    app:layout_constraintTop_toTopOf="parent" />
+    app:layout_constraintTop_toTopOf="parent"
+    app:shapeAppearanceOverlay="@style/roundedCornerStyle" />
 ```
 
 ## 属性介绍
