@@ -2,17 +2,24 @@
 
 镂空遮罩图层库是为了适配网易云Video的封面时看到有一层图层，且转角还画了线，没有找到好的方案就自己写成了库
 
-<img src="hollowout-drawable.png" width="256"/><img src="hollowout-drawable2.png" width="256"/><img src="https://user-images.githubusercontent.com/8099426/122522727-da158c00-d048-11eb-81e6-00ce67ec0b75.gif" width="256"/>
+<p align="center">
+<img src="hollowout-drawable.png" width="32%"/>
+<img src="hollowout-drawable2.png" width="32%"/>
+<img src="https://user-images.githubusercontent.com/8099426/122522727-da158c00-d048-11eb-81e6-00ce67ec0b75.gif" width="32%"/>
+</p>
 
 > Notes: library use 'androidx.palette:palette-ktx', if don't want to， you may give up
 
-# Usage
+## Including in your project
+[![Maven Central](https://img.shields.io/maven-central/v/com.xuie0000/hollowout.drawable.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.xuie0000%22%20AND%20a:%22hollowout.drawable%22)
 
 repositories add `mavenCentral()`
 
 ```groovy
-implementation "com.xuie0000:hollowout.drawable:1.0.2"
+implementation "com.xuie0000:hollowout.drawable:1.0.3"
 ```
+
+# Usage
 
 support AppCompatImageView&**ShapeableImageView** hollow out drawable
 
