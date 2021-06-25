@@ -5,7 +5,7 @@
 <p align="center">
 <img src="hollowout-drawable.png" width="32%"/>
 <img src="hollowout-drawable2.png" width="32%"/>
-<img src="https://user-images.githubusercontent.com/8099426/122522727-da158c00-d048-11eb-81e6-00ce67ec0b75.gif" width="32%"/>
+<img src="https://user-images.githubusercontent.com/8099426/123357949-260e8680-d59d-11eb-9980-da54ed52c091.gif" width="32%"/>
 </p>
 
 > Notes: library use 'androidx.palette:palette-ktx', if don't want to， you may give up
