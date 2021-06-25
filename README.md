@@ -72,3 +72,4 @@ hollow_out_roundCornerColor | color | 10dp | round corner stroke color
 # References
 
 https://zhuanlan.zhihu.com/p/329825945
+https://xuie0000.com/post/2021-06-18-netease-10-hollowout-drawable.html
