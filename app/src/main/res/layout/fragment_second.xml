@@ -26,7 +26,7 @@
             android:layout_height="160dp"
             android:scaleType="centerCrop"
             app:hollow_out_color="#90F2F2F2"
-            app:hollow_out_round_corner_stroke="2dp"
+            app:hollow_out_roundCornerStroke="2dp"
             app:layout_constraintTop_toBottomOf="@id/image1"
             app:shapeAppearanceOverlay="@style/roundedCornerStyle" />
 
@@ -36,10 +36,11 @@
             android:layout_height="160dp"
             android:scaleType="centerCrop"
             android:src="@mipmap/image"
-            app:hollow_out_padding_horizontal="0dp"
-            app:hollow_out_round_corner="20dp"
-            app:hollow_out_round_corner_color="#FF6347"
-            app:hollow_out_round_corner_stroke="3dp"
+            app:hollow_out_paddingEnd="0dp"
+            app:hollow_out_paddingStart="0dp"
+            app:hollow_out_roundCorner="20dp"
+            app:hollow_out_roundCornerColor="#FF6347"
+            app:hollow_out_roundCornerStroke="3dp"
             app:layout_constraintTop_toBottomOf="@id/image2"
             app:shapeAppearanceOverlay="@style/roundedCornerStyle" />
 
@@ -79,25 +80,6 @@
             app:layout_constraintTop_toBottomOf="@id/image6"
             app:shapeAppearanceOverlay="@style/roundedCornerStyle" />
 
-        <com.xuie0000.hollowout.drawable.HollowOutShapeableImageView
-            android:id="@+id/image8"
-            android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/image"
-            app:hollow_out_shape="arc"
-            app:layout_constraintTop_toBottomOf="@id/image7"
-            app:shapeAppearanceOverlay="@style/roundedCornerStyle" />
-
-        <com.xuie0000.hollowout.drawable.HollowOutShapeableImageView
-            android:id="@+id/image9"
-            android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:background="@color/teal_200"
-            android:scaleType="centerCrop"
-            app:hollow_out_shape="arc"
-            app:layout_constraintTop_toBottomOf="@id/image8"
-            app:shapeAppearanceOverlay="@style/roundedCornerStyle" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

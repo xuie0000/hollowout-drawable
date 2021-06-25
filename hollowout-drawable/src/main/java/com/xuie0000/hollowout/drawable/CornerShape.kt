@@ -5,5 +5,4 @@ enum class CornerShape {
   CIRCLE,
   OVAL,
   RECTANGLE,
-  ARC,
 }

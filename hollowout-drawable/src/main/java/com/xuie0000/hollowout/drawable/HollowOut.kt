@@ -26,13 +26,12 @@ internal open class HollowOut(
    * 间距
    */
   private var outPadding: Float
-  private var outPaddingHorizontal: Float
-  private var outPaddingVertical: Float
+  private var outPaddingStart: Float
+  private var outPaddingTop: Float
+  private var outPaddingEnd: Float
+  private var outPaddingBottom: Float
 
   private var cornerShape: CornerShape
-
-  private var arcStartAngle: Float
-  private var arcSweepAngle: Float
 
   /**
    * 圆角矩形的角度
@@ -61,11 +60,17 @@ internal open class HollowOut(
       outPadding = getDimension(
         R.styleable.HollowOutImageView_hollow_out_padding, 40.dp
       )
-      outPaddingHorizontal = getDimension(
-        R.styleable.HollowOutImageView_hollow_out_padding_horizontal, -1f
+      outPaddingStart = getDimension(
+        R.styleable.HollowOutImageView_hollow_out_paddingStart, -1f
       )
-      outPaddingVertical = getDimension(
-        R.styleable.HollowOutImageView_hollow_out_padding_vertical, -1f
+      outPaddingTop = getDimension(
+        R.styleable.HollowOutImageView_hollow_out_paddingTop, -1f
+      )
+      outPaddingEnd = getDimension(
+        R.styleable.HollowOutImageView_hollow_out_paddingEnd, -1f
+      )
+      outPaddingBottom = getDimension(
+        R.styleable.HollowOutImageView_hollow_out_paddingBottom, -1f
       )
 
       cornerShape = CornerShape.values()[getInt(
@@ -73,17 +78,14 @@ internal open class HollowOut(
         CornerShape.ROUND_CORNER.ordinal
       )]
       roundCorner = getDimension(
-        R.styleable.HollowOutImageView_hollow_out_round_corner, 10.dp
+        R.styleable.HollowOutImageView_hollow_out_roundCorner, 10.dp
       )
       roundCornerStroke = getDimension(
-        R.styleable.HollowOutImageView_hollow_out_round_corner_stroke, -1f
+        R.styleable.HollowOutImageView_hollow_out_roundCornerStroke, -1f
       )
       roundCornerColor = getColor(
-        R.styleable.HollowOutImageView_hollow_out_round_corner_color, "#F2F2F2".toColorInt()
+        R.styleable.HollowOutImageView_hollow_out_roundCornerColor, "#F2F2F2".toColorInt()
       )
-
-      arcStartAngle = getFloat(R.styleable.HollowOutImageView_hollow_out_arc_startAngle, 0f)
-      arcSweepAngle = getFloat(R.styleable.HollowOutImageView_hollow_out_arc_sweepAngle, 180f)
 
       recycle()
 
@@ -114,15 +116,17 @@ internal open class HollowOut(
     //设置离屏缓冲的范围
     bounds.set(0f, 0f, width.toFloat(), height.toFloat())
     //设置Clip Path的矩形区域
-    val paddingStartEnd = if (outPaddingHorizontal > 0) outPaddingHorizontal else outPadding
-    val paddingTopBottom = if (outPaddingVertical > 0) outPaddingVertical else outPadding
+    val paddingStart = if (outPaddingStart > 0) outPaddingStart else outPadding
+    val paddingTop = if (outPaddingTop > 0) outPaddingTop else outPadding
+    val paddingEnd = if (outPaddingEnd > 0) outPaddingEnd else outPadding
+    val paddingBottom = if (outPaddingBottom > 0) outPaddingBottom else outPadding
     when (cornerShape) {
       CornerShape.ROUND_CORNER -> {
         clipPath.addRoundRect(
-          paddingStartEnd,
-          paddingTopBottom,
-          width - paddingStartEnd,
-          height - paddingTopBottom,
+          paddingStart,
+          paddingTop,
+          width - paddingEnd,
+          height - paddingBottom,
           roundCorner,
           roundCorner,
           Path.Direction.CW
@@ -130,64 +134,56 @@ internal open class HollowOut(
         val rectF = RectF()
         // 设置左上角
         rectF.set(
-          paddingStartEnd,
-          paddingTopBottom,
-          paddingStartEnd + roundCorner * 2,
-          paddingTopBottom + roundCorner * 2
+          paddingStart,
+          paddingTop,
+          paddingEnd + roundCorner * 2,
+          paddingBottom + roundCorner * 2
         )
         strokePath.reset()
         strokePath.arcTo(rectF, 180f, 90f, true)
         // 右上角
         rectF.set(
-          width - paddingStartEnd - roundCorner * 2,
-          paddingTopBottom,
-          width - paddingStartEnd,
-          paddingTopBottom + roundCorner * 2
+          width - paddingStart - roundCorner * 2,
+          paddingTop,
+          width - paddingEnd,
+          paddingBottom + roundCorner * 2
         )
         strokePath.arcTo(rectF, 270f, 90f, true)
         // 右下角
         rectF.set(
-          width - paddingStartEnd - roundCorner * 2,
-          height - paddingTopBottom - roundCorner * 2,
-          width - paddingStartEnd,
-          height - paddingTopBottom
+          width - paddingStart - roundCorner * 2,
+          height - paddingTop - roundCorner * 2,
+          width - paddingEnd,
+          height - paddingBottom
         )
         strokePath.arcTo(rectF, 0f, 90f, true)
         // 左下角
         rectF.set(
-          paddingStartEnd,
-          height - paddingTopBottom - roundCorner * 2,
-          paddingStartEnd + roundCorner * 2,
-          height - paddingTopBottom
+          paddingStart,
+          height - paddingTop - roundCorner * 2,
+          paddingEnd + roundCorner * 2,
+          height - paddingBottom
         )
         strokePath.arcTo(rectF, 90f, 90f, true)
-
-
       }
       CornerShape.CIRCLE -> {
         val x = width / 2f
         val y = height / 2f
-        val radius = if (width < height) x - paddingStartEnd else y - paddingTopBottom
+        val radius = if (width < height) x - paddingStart else y - paddingTop
         clipPath.addCircle(x, y, radius, Path.Direction.CW)
       }
       CornerShape.OVAL -> clipPath.addOval(
-        paddingStartEnd,
-        paddingTopBottom,
-        width - paddingStartEnd,
-        height - paddingTopBottom, Path.Direction.CW
+        paddingStart,
+        paddingTop,
+        width - paddingEnd,
+        height - paddingBottom, Path.Direction.CW
       )
       CornerShape.RECTANGLE -> clipPath.addRect(
-        paddingStartEnd,
-        paddingTopBottom,
-        width - paddingStartEnd,
-        height - paddingTopBottom,
+        paddingStart,
+        paddingTop,
+        width - paddingEnd,
+        height - paddingBottom,
         Path.Direction.CW
-      )
-      CornerShape.ARC -> clipPath.addArc(
-        paddingStartEnd,
-        paddingTopBottom,
-        width - paddingStartEnd,
-        height - paddingTopBottom, arcStartAngle, arcSweepAngle
       )
     }
   }

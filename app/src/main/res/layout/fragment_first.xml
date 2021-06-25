@@ -25,7 +25,7 @@
             android:layout_height="160dp"
             android:scaleType="centerCrop"
             app:hollow_out_color="#90F2F2F2"
-            app:hollow_out_round_corner_stroke="2dp"
+            app:hollow_out_roundCornerStroke="2dp"
             app:layout_constraintTop_toBottomOf="@id/image1" />
 
         <com.xuie0000.hollowout.drawable.HollowOutImageView
@@ -34,10 +34,11 @@
             android:layout_height="160dp"
             android:scaleType="centerCrop"
             android:src="@mipmap/image"
-            app:hollow_out_padding_horizontal="0dp"
-            app:hollow_out_round_corner="20dp"
-            app:hollow_out_round_corner_color="#FF6347"
-            app:hollow_out_round_corner_stroke="3dp"
+            app:hollow_out_paddingEnd="0dp"
+            app:hollow_out_paddingStart="0dp"
+            app:hollow_out_roundCorner="20dp"
+            app:hollow_out_roundCornerColor="#FF6347"
+            app:hollow_out_roundCornerStroke="3dp"
             app:layout_constraintTop_toBottomOf="@id/image2" />
 
         <com.xuie0000.hollowout.drawable.HollowOutImageView
@@ -72,16 +73,6 @@
             app:hollow_out_shape="circle"
             app:layout_constraintTop_toBottomOf="@id/image6" />
 
-        <com.xuie0000.hollowout.drawable.HollowOutImageView
-            android:id="@+id/image8"
-            android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/image"
-            app:hollow_out_padding_horizontal="0dp"
-            app:hollow_out_shape="arc"
-            app:layout_constraintTop_toBottomOf="@id/image7" />
-
         <Button
             android:id="@+id/button_first"
             android:layout_width="wrap_content"
@@ -91,6 +82,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/image8" />
+            app:layout_constraintTop_toBottomOf="@id/image7" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

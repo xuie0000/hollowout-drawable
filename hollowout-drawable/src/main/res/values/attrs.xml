@@ -1,34 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <attr name="hollow_out_padding_horizontal" format="dimension" />
-    <attr name="hollow_out_padding_vertical" format="dimension" />
     <attr name="hollow_out_padding" format="dimension" />
+    <attr name="hollow_out_paddingStart" format="dimension" />
+    <attr name="hollow_out_paddingTop" format="dimension" />
+    <attr name="hollow_out_paddingEnd" format="dimension" />
+    <attr name="hollow_out_paddingBottom" format="dimension" />
     <attr name="hollow_out_shape">
         <enum name="round_corner" value="0" />
         <enum name="circle" value="1" />
         <enum name="oval" value="2" />
         <enum name="rectangle" value="3" />
-        <enum name="arc" value="4" />
     </attr>
     <attr name="hollow_out_color" format="color" />
-    <attr name="hollow_out_round_corner" format="dimension" />
-    <attr name="hollow_out_round_corner_stroke" format="dimension" />
-    <attr name="hollow_out_round_corner_color" format="color" />
-    <attr name="hollow_out_arc_startAngle" format="float" />
-    <attr name="hollow_out_arc_sweepAngle" format="float" />
+    <attr name="hollow_out_roundCorner" format="dimension" />
+    <attr name="hollow_out_roundCornerStroke" format="dimension" />
+    <attr name="hollow_out_roundCornerColor" format="color" />
 
     <declare-styleable name="HollowOutImageView">
         <attr name="hollow_out_padding" />
-        <attr name="hollow_out_padding_horizontal" />
-        <attr name="hollow_out_padding_vertical" />
+        <attr name="hollow_out_paddingStart" />
+        <attr name="hollow_out_paddingTop" />
+        <attr name="hollow_out_paddingEnd" />
+        <attr name="hollow_out_paddingBottom" />
         <attr name="hollow_out_shape" />
         <attr name="hollow_out_color" />
-        <attr name="hollow_out_round_corner" />
-        <attr name="hollow_out_round_corner_stroke" />
-        <attr name="hollow_out_round_corner_color" />
-        <attr name="hollow_out_arc_startAngle" />
-        <attr name="hollow_out_arc_sweepAngle" />
+        <attr name="hollow_out_roundCorner" />
+        <attr name="hollow_out_roundCornerStroke" />
+        <attr name="hollow_out_roundCornerColor" />
     </declare-styleable>
 
 

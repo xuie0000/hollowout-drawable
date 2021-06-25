@@ -52,15 +52,15 @@ binding.image.load(url) {
 Attribute | Type | Default | Description
 ---|---|---|---
 hollow_out_padding | dimension | 40dp | padding to view side
-hollow_out_padding_horizontal | dimension | | horizontal padding to view side
-hollow_out_padding_vertical | dimension | | vertical padding to view side
-hollow_out_shape | enum | round_corner | shapes, include round_corner,circle,oval,rectangle,arc
+hollow_out_paddingStart | dimension | | start/left padding to view side
+hollow_out_paddingTop | dimension | | top padding to view side
+hollow_out_paddingEnd | dimension | | end/right padding to view side
+hollow_out_paddingBottom | dimension | | bottom padding to view side
+hollow_out_shape | enum | round_corner | shapes, include round_corner,circle,oval,rectangle
 hollow_out_color | color | null | if the color exist, will **replace blur image**
-hollow_out_round_corner | dimension | 10dp | round corner radius
-hollow_out_round_corner_stroke | dimension | | round corner stroke width
-hollow_out_round_corner_color | color | 10dp | round corner stroke color
-hollow_out_arc_startAngle | float | 0f | arc start angle
-hollow_out_arc_sweepAngle | float | 180f | arc sweep angle
+hollow_out_roundCorner | dimension | 10dp | round corner radius
+hollow_out_roundCornerStroke | dimension | | round corner stroke width
+hollow_out_roundCornerColor | color | 10dp | round corner stroke color
 
 # References
 
