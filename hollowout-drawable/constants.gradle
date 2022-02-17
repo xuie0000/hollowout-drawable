@@ -5,8 +5,8 @@ ext {
     githubUrl = 'https://github.com/xuie0000/hollowout-drawable'
 
     mavenGroup = 'com.xuie0000'
-    mavenArtifactId = 'hollowout-drawable'
-    mavenVersion = '1.0.4'
+    mavenArtifactId = 'hollowout.drawable'
+    mavenVersion = '1.0.5'
 
     developerId = 'xuie0000'
     developerName = 'Xu Jie'

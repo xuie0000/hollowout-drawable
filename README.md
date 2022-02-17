@@ -16,7 +16,7 @@
 repositories add `mavenCentral()`
 
 ```groovy
-implementation "com.xuie0000:hollowout-drawable:1.0.4"
+implementation "com.xuie0000:hollowout.drawable:1.0.5"
 ```
 
 # Usage
