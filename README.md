@@ -8,7 +8,7 @@
 <img src="https://user-images.githubusercontent.com/8099426/123357949-260e8680-d59d-11eb-9980-da54ed52c091.gif" width="32%"/>
 </p>
 
-> Notes: library use 'androidx.palette:palette-ktx', if don't want to， you may give up
+> Notes: library use 'androidx.palette:palette-ktx'
 
 ## Including in your project
 [![Maven Central](https://img.shields.io/maven-central/v/com.xuie0000/hollowout.drawable.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.xuie0000%22%20AND%20a:%22hollowout.drawable%22)
@@ -16,7 +16,7 @@
 repositories add `mavenCentral()`
 
 ```groovy
-implementation "com.xuie0000:hollowout.drawable:1.0.3"
+implementation "com.xuie0000:hollowout-drawable:1.0.4"
 ```
 
 # Usage

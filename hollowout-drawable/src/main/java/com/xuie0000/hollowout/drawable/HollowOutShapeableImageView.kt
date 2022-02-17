@@ -6,6 +6,7 @@ import android.util.AttributeSet
 import com.google.android.material.imageview.ShapeableImageView
 import java.lang.reflect.Field
 
+@Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 class HollowOutShapeableImageView @JvmOverloads constructor(
   context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : ShapeableImageView(context, attrs, defStyleAttr) {
